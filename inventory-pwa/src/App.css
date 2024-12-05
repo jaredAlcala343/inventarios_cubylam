@@ -1,0 +1,126 @@
+/* Fuente importada */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+/* Estilos generales */
+body {
+  font-family: 'OSWALD', sans-serif; /* Fuente moderna */
+  margin: 0;
+  padding: 0;
+  background-color: #03022e; /* Fondo negro sutil de la página */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Contenedor principal */
+.login-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff; /* Fondo blanco para el formulario */
+  border-radius: 12px;
+  position: relative; /* Necesario para la animación del box-shadow */
+  overflow: hidden;
+  box-shadow: 0 0 99px rgba(255, 255, 255, 0.5); /* Sombra ligera */
+  animation: slide-shadow 2s linear infinite; /* Animación para el riel */
+}
+
+/* Estilos del formulario */
+.login-form {
+  padding: 40px;
+  width: 50%;
+  text-align: center;
+}
+
+.login-form h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+  color: #053160; /* Color de texto */
+}
+.login-form h4	{
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #053160; /* Color de texto */
+}
+
+.login-form input {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #053160;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #f9f638;
+  color: #053160;
+  transition: background-color 1.1s ease;
+}
+
+/* Estilos de la imagen */
+.login-image {
+  width: 50%;
+  background-color: #ffffff;
+  
+}
+
+.login-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animación del box-shadow (riel plateado) */
+@keyframes slide-shadow {
+  0% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1), inset 0 0 50px rgba(250, 250, 250, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1), inset 0 0 50px rgba(192, 192, 192, 0.7), 0 0 50px rgba(192, 192, 192, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.1), inset 0 0 50px rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .login-form {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .login-image {
+    display: none;
+  }
+}
